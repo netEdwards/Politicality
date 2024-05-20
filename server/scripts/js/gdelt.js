@@ -5,9 +5,9 @@ const getGDELTEvents = async (query) => {
 
     try{
         const response = await axios.get(url);
-        return response.data.articles;
+        return response.data.articles || [];
     }catch(error){
-        console.error('Error fetching GDELT events:', error);
+        console.error('Error fetching GDELT GKG events:', error);
         return null;
     }
 };
