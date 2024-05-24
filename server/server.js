@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 
 app.use('/api', g_router);
 
-const port = process.env.PORT;
+const port = process.env.S_PORT;
 app.listen(port, () => {
     console.log('Server is running on port ', port, 'at http://localhost:8082');
 })

@@ -1,0 +1,21 @@
+.revealcont{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    overflow: hidden;
+}
+.revealed{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../media/hands.png'); /* Replace with your image URL */
+    background-size: cover;
+    clip-path: circle(0% at 50% 50%);
+    
+}
+.revealcont:hover .revealed{
+    clip-path: circle(5% at var(--mouse-x) var(--mouse-y));
+}
